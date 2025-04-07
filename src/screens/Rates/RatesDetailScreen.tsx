@@ -12,8 +12,6 @@ export const RatesDetailScreen = () => {
     { x: "Bid", y: bid },
   ];
 
-  console.log();
-
   return (
     <div className="flex-grow">
       <h1 className="text-3xl p-5 font-bold">{name.toUpperCase()} Details</h1>
