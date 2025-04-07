@@ -1,10 +1,17 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LineChart } from "@mui/x-charts";
 import { RateItem } from "../../types";
-
+import { useEffect } from "react";
 export const RatesDetailScreen = () => {
-  const coinRate: RateItem = useLocation().state;
+  const coinRate: RateItem = useLocation().state || {};
+  const navigate = useNavigate();
   const { name, ask, bid, rate, diff24h } = coinRate;
+
+  useEffect(() => {
+    if (!rate) {
+      navigate("/", { replace: true });
+    }
+  }, [rate, navigate]);
 
   const chartData = [
     { x: "Ask", y: ask },
@@ -14,7 +21,7 @@ export const RatesDetailScreen = () => {
 
   return (
     <div className="flex-grow">
-      <h1 className="text-3xl p-5 font-bold">{name.toUpperCase()} Details</h1>
+      <h1 className="text-3xl p-5 font-bold">{name?.toUpperCase()} Details</h1>
       <div className="p-5 flex justify-center">
         <div className="text-xl ">
           <span className="font-bold">Rate: </span>
