@@ -1,13 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchRatesData } from "../api";
-
-interface RateItem {
-  name: string;
-  ask: number;
-  bid: number;
-  diff24h: number;
-  rate: number;
-}
+import { RateItem } from "../types";
 
 export const useGetRatesData = ({
   searhTerm,

@@ -47,6 +47,7 @@ export const RatesListScreen = () => {
         {isPending ? (
           <span className="text-gray-500 text-lg font-light">Searching</span>
         ) : (
+          //don't wanna use hook useMemo for such low count of data
           data.map((tile) => <RateTile tile={tile} key={tile.name} />)
         )}
       </div>

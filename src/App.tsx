@@ -5,7 +5,7 @@ import { MainLayout, NotFoundPage } from "./components";
 function App() {
   return (
     <MainLayout>
-      <Routes>
+      <Routes >
         <Route path="/" element={<RatesListScreen />} />
         <Route path="/:ticker" caseSensitive element={<RatesDetailScreen />} />
         <Route path="*" element={<NotFoundPage />} />

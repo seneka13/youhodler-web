@@ -1,5 +1,7 @@
 # Regarding task
 
+Github pages url: https://seneka13.github.io/youhodler-web/
+
 I didn't see any reason to use a special state manager for such a small amount of data
 
 The charts were implemented only as an example, I think they could be more detailed and provide more consistent information.

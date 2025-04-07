@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import { Header } from "./Header";
-import { Loader } from "./Loader";
-import { Footer } from "./Footer";
+import { Header } from "../Header";
+import { Loader } from "../Loader";
+import { Footer } from "../Footer/Footer";
 
 export const MainLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
