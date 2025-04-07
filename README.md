@@ -1,3 +1,13 @@
+# Regarding task
+
+I didn't see any reason to use a special state manager for such a small amount of data
+
+The charts were implemented only as an example, I think they could be more detailed and provide more consistent information.
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
